@@ -55,7 +55,7 @@ class NeuralNet():
             # layer_1 = np.maximum(z_1, 0.01 * z_1)
             layer_1 = self.leaky_relu(z_1)
 
-        z_2 = np.dot(z_1, w_2) + b_2
+        z_2 = np.dot(layer_1, w_2) + b_2
         if self.is_relu:
             # layer_2 = np.maximum(z_2, 0)
             layer_2 = self.relu(z_2)
